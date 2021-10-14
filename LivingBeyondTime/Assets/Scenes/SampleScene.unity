@@ -198,6 +198,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cloud Generator
       objectReference: {fileID: 0}
+    - target: {fileID: 3150545164481133034, guid: 03f3f4841f82b0f47b7164b25df7d2f0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8694445133265851092, guid: 03f3f4841f82b0f47b7164b25df7d2f0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -242,6 +246,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8924716053832606927, guid: 03f3f4841f82b0f47b7164b25df7d2f0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924716053832606927, guid: 03f3f4841f82b0f47b7164b25df7d2f0, type: 3}
+      propertyPath: clouds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924716053832606927, guid: 03f3f4841f82b0f47b7164b25df7d2f0, type: 3}
+      propertyPath: DayNightCycleScript
+      value: 
+      objectReference: {fileID: 1259526143}
+    - target: {fileID: 8924716053832606927, guid: 03f3f4841f82b0f47b7164b25df7d2f0, type: 3}
+      propertyPath: clouds.Array.data[4]
+      value: 
+      objectReference: {fileID: 9202517006411587547, guid: ee65592539f3141478c09e8d028cffc7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03f3f4841f82b0f47b7164b25df7d2f0, type: 3}
 --- !u!1 &277253985
@@ -271,8 +291,8 @@ Transform:
   m_LocalPosition: {x: 1222.1215, y: 800.8626, z: -90.65185}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 783655937}
   - {fileID: 1100068168}
+  - {fileID: 783655937}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1157,6 +1177,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &764252994 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8924716053832606927, guid: 03f3f4841f82b0f47b7164b25df7d2f0, type: 3}
+  m_PrefabInstance: {fileID: 207521464}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2a41cfe7281e04b925c21afa4df6d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &783655937 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6290885531511540436, guid: 585b3d8a44a51894296ce0dd785b5b22, type: 3}
@@ -1214,6 +1245,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1259526143 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4836017299933451377, guid: c9d85bee352c2ee4ebc721b6c38be40f, type: 3}
+  m_PrefabInstance: {fileID: 4836017301033378104}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a84523f3dd2e3419ceb3a12fddbf06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1314615885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,7 +1674,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4836017299933451376, guid: c9d85bee352c2ee4ebc721b6c38be40f, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4836017299933451376, guid: c9d85bee352c2ee4ebc721b6c38be40f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1675,6 +1717,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4836017299933451377, guid: c9d85bee352c2ee4ebc721b6c38be40f, type: 3}
+      propertyPath: hours
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836017299933451377, guid: c9d85bee352c2ee4ebc721b6c38be40f, type: 3}
       propertyPath: NightSky
       value: 
       objectReference: {fileID: 894999923}
@@ -1686,6 +1732,10 @@ PrefabInstance:
       propertyPath: timeDisplay
       value: 
       objectReference: {fileID: 1314615887}
+    - target: {fileID: 4836017299933451377, guid: c9d85bee352c2ee4ebc721b6c38be40f, type: 3}
+      propertyPath: CloudGeneratorScript
+      value: 
+      objectReference: {fileID: 764252994}
     - target: {fileID: 4836017299933451377, guid: c9d85bee352c2ee4ebc721b6c38be40f, type: 3}
       propertyPath: lights.Array.data[0]
       value: 
@@ -1729,7 +1779,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6290885531511540436, guid: 585b3d8a44a51894296ce0dd785b5b22, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6290885531511540436, guid: 585b3d8a44a51894296ce0dd785b5b22, type: 3}
       propertyPath: m_LocalPosition.x

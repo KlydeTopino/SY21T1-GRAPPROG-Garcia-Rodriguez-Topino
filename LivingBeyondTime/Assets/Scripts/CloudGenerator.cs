@@ -6,9 +6,8 @@ public class CloudGenerator : MonoBehaviour
 {
     [SerializeField]
     GameObject[] clouds;
-
-    [SerializeField]
-    float spawnInterval;
+    
+    public float spawnInterval;
 
     [SerializeField]
     GameObject endPoint;
@@ -17,7 +16,7 @@ public class CloudGenerator : MonoBehaviour
 
     public int StartingClouds;
 
-    void Start()
+    public void Start()
     {
         startPos = transform.position;
         Prewarm();
@@ -37,13 +36,11 @@ public class CloudGenerator : MonoBehaviour
 
         float speed = UnityEngine.Random.Range(0.5f, 1.5f);
         cloud.GetComponent<CloudScript>().StartFloating(speed, endPoint.transform.position.x);
-
     }
 
     void AttemptSpawn()
     {
         SpawnCloud(startPos);
-
         Invoke("AttemptSpawn", spawnInterval);
     }
 
