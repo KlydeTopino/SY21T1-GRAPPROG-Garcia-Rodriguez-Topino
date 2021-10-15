@@ -9,8 +9,8 @@ using UnityEngine.Rendering; // used to access the volume component
 public class DayNightCycle : MonoBehaviour
 {
     [Header("Basic Components")]
-    public TextMeshProUGUI timeDisplay; // Display Time
-    public TextMeshProUGUI dayDisplay; // Display Day
+    //public TextMeshProUGUI timeDisplay; // Display Time
+    //public TextMeshProUGUI dayDisplay; // Display Day
     public Volume ppv; // this is the post processing volume
 
     [Header("Time-related Components")]
@@ -139,8 +139,8 @@ public class DayNightCycle : MonoBehaviour
 
     public void DisplayTime() // Shows time and day in ui
     {
-        timeDisplay.text = string.Format("{0:00}:{1:00}", hours, mins); // The formatting ensures that there will always be 0's in empty spaces
-        dayDisplay.text = "Day: " + days; // display day counter
+        //timeDisplay.text = string.Format("{0:00}:{1:00}", hours, mins); // The formatting ensures that there will always be 0's in empty spaces
+        //dayDisplay.text = "Day: " + days; // display day counter
     }
 
     public void CloudControl()
