@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Clouds
+  - Map
+  - CamBoundary
   layers:
   - Default
   - TransparentFX
