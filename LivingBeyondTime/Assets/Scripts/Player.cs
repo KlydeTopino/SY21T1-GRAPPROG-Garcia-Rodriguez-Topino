@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public PlayerController2D controller;
+    public float runSpeed;
+
+    float horizontalMove = 0f;
+    bool jump = false;
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Input.GetAxis("Horizontal") * 15f * Time.deltaTime, 0f, 0f);
+        //transform.Translate(Input.GetAxis("Horizontal") * 15f * Time.deltaTime, 0f, 0f);
+        horizontalMove = Input.GetAxis("Horizontal") * runSpeed;
+
+        if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W))
+        {
+            jump = true;
+        }
+    }
+
+    void FixedUpdate()
+    {
+        controller.Move(horizontalMove * Time.deltaTime, false, jump);
+        jump = false; //Single Jump Only
     }
 }

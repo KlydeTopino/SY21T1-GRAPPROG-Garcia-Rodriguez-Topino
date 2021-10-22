@@ -11,8 +11,8 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SpriteRenderer Sprite = Player.GetComponent<SpriteRenderer>();
-        Sprite.flipX = false;
+        //SpriteRenderer Sprite = Player.GetComponent<SpriteRenderer>();
+        //Sprite.flipX = false;
         IsStarting = true;
     }
 

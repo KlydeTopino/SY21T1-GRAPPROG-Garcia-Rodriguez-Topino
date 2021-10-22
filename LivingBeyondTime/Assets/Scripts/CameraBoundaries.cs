@@ -8,7 +8,10 @@ public class CameraBoundaries : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Hello");
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Hit");
+        }
     }
 
 }
