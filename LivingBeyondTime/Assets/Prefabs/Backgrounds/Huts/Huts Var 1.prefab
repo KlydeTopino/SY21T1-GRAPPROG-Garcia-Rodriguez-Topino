@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1105568027092513328}
   - component: {fileID: 1105568027092513329}
-  - component: {fileID: 3616209967122227084}
+  - component: {fileID: 6267124167027494603}
   m_Layer: 0
   m_Name: Huts Var 1
   m_TagString: Untagged
@@ -84,8 +84,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3616209967122227084
-BoxCollider2D:
+--- !u!60 &6267124167027494603
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -107,6 +107,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.69, y: 5.06}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.6, y: 2.49}
+      - {x: 1.35, y: 2.52}
+      - {x: -1.29, y: 2.54}
+      - {x: -2.04, y: 2.18}
+      - {x: -2.29, y: -2.5833335}
+      - {x: 2.32, y: -2.5833335}
+      - {x: 2.14, y: 0.5}
