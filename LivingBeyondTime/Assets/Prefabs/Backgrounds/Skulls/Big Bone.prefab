@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6262397447003877593}
   - component: {fileID: 6262397447003877592}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Big Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1107514937
+  m_SortingLayer: 2
   m_SortingOrder: 11
   m_Sprite: {fileID: -4339128039953064258, guid: 3d2c6ca1d82459e428d6e775dfbc47a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

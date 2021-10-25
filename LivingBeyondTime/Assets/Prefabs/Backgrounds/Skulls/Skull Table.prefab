@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7877303449932562401}
   - component: {fileID: 7877303449932562400}
   - component: {fileID: 3644190130712638243}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Skull Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1107514937
+  m_SortingLayer: 2
   m_SortingOrder: 11
   m_Sprite: {fileID: 3515978246349041609, guid: de71837ce7397614891ecf81bae4f9d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

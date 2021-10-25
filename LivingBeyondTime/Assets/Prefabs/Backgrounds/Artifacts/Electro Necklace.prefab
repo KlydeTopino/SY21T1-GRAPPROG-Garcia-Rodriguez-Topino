@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7715840896871910092}
   - component: {fileID: 7715840896871910091}
   - component: {fileID: 5979724426903183493}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Electro Necklace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,9 +70,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingLayerID: -1107514937
+  m_SortingLayer: 2
+  m_SortingOrder: 10
   m_Sprite: {fileID: 4084472388846549225, guid: de71837ce7397614891ecf81bae4f9d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

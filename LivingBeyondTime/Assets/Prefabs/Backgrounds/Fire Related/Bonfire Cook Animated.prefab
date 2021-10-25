@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3360865546700180413}
   - component: {fileID: 2712240174160419679}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spot Light test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 0.5
   m_LightVolumeIntensityEnabled: 1
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000c7a9fcbd
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 4465318902124060960}
   - component: {fileID: 1749125900578723247}
   - component: {fileID: 4712166880608791522}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bonfire Cook Animated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,8 +180,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1107514937
+  m_SortingLayer: 2
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: b1a43017781081943aaf3d0e4f77be9d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

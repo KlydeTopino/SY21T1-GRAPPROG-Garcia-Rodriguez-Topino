@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7510665205824062753}
   - component: {fileID: 5791785762961590998}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spot Light test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 0.5
   m_LightVolumeIntensityEnabled: 1
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000c7a9fcbd
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 1627087351930808495}
   - component: {fileID: 1626686935593452050}
   - component: {fileID: 1075516781771393330}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gray Fire Small Animated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,8 +180,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1107514937
+  m_SortingLayer: 2
   m_SortingOrder: 10
   m_Sprite: {fileID: 6749051280488517631, guid: 77a6c9968223e0c46b1534f5fbbf7bdb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7043861911394576377}
   - component: {fileID: 7043861911394576382}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flower 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1107514937
+  m_SortingLayer: 2
   m_SortingOrder: 10
   m_Sprite: {fileID: 7700774605151770912, guid: ad0aa76c951cdd145a11545c1770890c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

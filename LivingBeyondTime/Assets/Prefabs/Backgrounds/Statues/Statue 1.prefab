@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6216971}
   - component: {fileID: 6216972}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light 2D (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608966537}
   - component: {fileID: 1608966538}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 3184502717310354412}
   - component: {fileID: 3184502717310354413}
   - component: {fileID: 6502268099750703520}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Statue 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

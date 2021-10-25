@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1770844438097701117}
   - component: {fileID: 1770844438097701118}
   - component: {fileID: 1770844438097701116}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wood Tall Fire Animated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1107514937
+  m_SortingLayer: 2
   m_SortingOrder: 10
   m_Sprite: {fileID: -8557765888134546687, guid: aed9b71cb1d845b4f9c7a0d79f6c8720, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -114,7 +114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7740860030298750548}
   - component: {fileID: 5338009147301709805}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spot Light test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 0.5
   m_LightVolumeIntensityEnabled: 1
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000c7a9fcbd
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0

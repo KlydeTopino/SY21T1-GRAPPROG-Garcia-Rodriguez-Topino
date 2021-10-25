@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 957157083086767981}
   - component: {fileID: 8266517086605178412}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dino Bone Head 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1107514937
+  m_SortingLayer: 2
   m_SortingOrder: 11
   m_Sprite: {fileID: -2179715609190625935, guid: 140f99240fcb1894f82222b630e2cfff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
