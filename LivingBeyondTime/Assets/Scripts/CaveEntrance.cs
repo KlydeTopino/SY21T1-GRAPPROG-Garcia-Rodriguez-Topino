@@ -19,7 +19,7 @@ public class CaveEntrance : MonoBehaviour
 
     public void EnterCave(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && Input.GetButtonDown("Enter"))
+        if (collision.gameObject.CompareTag("Player") && (Input.GetButtonDown("Enter") || Input.GetButton("Enter")))
         {
             collision.transform.position = Teleport.transform.position;
             NightSky.SetActive(false);

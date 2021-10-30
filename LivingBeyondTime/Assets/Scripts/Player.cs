@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public float runSpeed;
 
     float horizontalMove = 0f;
-    bool jump = false;
+    public bool jump = false;
 
     // Update is called once per frame
     void Update()
@@ -27,4 +27,5 @@ public class Player : MonoBehaviour
         controller.Move(horizontalMove * Time.deltaTime, false, jump);
         jump = false; //Single Jump Only
     }
+
 }

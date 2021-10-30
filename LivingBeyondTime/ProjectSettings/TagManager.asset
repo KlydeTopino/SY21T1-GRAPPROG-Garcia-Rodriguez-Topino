@@ -7,6 +7,7 @@ TagManager:
   - Clouds
   - Map
   - CamBoundary
+  - Platform
   layers:
   - Default
   - TransparentFX
