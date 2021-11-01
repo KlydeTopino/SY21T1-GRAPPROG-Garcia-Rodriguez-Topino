@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CaveEntrance : MonoBehaviour
+public class CaveExit : MonoBehaviour
 {
     public GameObject Teleport;
     public GameObject NightSky;
@@ -26,7 +26,7 @@ public class CaveEntrance : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && Input.GetButtonDown("Enter") && isEnter)
         {
             collision.transform.position = Teleport.transform.position;
-            NightSky.SetActive(false);
+            NightSky.SetActive(true);
             isEnter = false;
         }
     }
