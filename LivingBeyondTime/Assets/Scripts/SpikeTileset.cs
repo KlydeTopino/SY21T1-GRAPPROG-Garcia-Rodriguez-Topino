@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpikeTileset : MonoBehaviour
 {
     public GameObject[] Hearts;
+    public GameObject DeathCanvas;
     public int TotalHearts;
     void Start()
     {
@@ -32,6 +33,7 @@ public class SpikeTileset : MonoBehaviour
     {
         if(TotalHearts == 0)
         {
+            DeathCanvas.SetActive(true);
             Debug.Log("Player is dead");
         }
     }

@@ -4799,6 +4799,7 @@ MonoBehaviour:
   - {fileID: 2036405009}
   - {fileID: 1577807267}
   - {fileID: 1635436362}
+  DeathCanvas: {fileID: 1097235405}
   TotalHearts: 0
 --- !u!1001 &227554732
 PrefabInstance:
