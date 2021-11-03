@@ -5018,3 +5018,5 @@ MonoBehaviour:
   ClosedChestCollider: {fileID: 0}
   OpenedChest: {fileID: 975475425}
   GoldEffect: {fileID: 744896492}
+  Key: {fileID: 1856858384762684827, guid: c80ca3d54d32b1643ba55bff68d7b1f2, type: 3}
+  KeyOffset: 2

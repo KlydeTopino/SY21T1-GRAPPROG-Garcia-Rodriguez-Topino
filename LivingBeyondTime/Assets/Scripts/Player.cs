@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Configs")]
     public PlayerController2D controller;
     public float runSpeed;
 
     float horizontalMove = 0f;
     public bool jump = false;
+    
+    [Header("Inventory")]
+    public int Keys = 0;
 
     // Update is called once per frame
     void Update()
@@ -20,12 +24,19 @@ public class Player : MonoBehaviour
         {
             jump = true;
         }
+
+        UpdateKey();
     }
 
     void FixedUpdate()
     {
         controller.Move(horizontalMove * Time.deltaTime, false, jump);
         jump = false; //Single Jump Only
+    }
+
+    public void UpdateKey()
+    {
+
     }
 
 }

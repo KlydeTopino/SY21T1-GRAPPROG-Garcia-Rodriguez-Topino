@@ -120,7 +120,10 @@ public class DayNightCycle : MonoBehaviour
 
             foreach (var cloud in Clouds)
             {
-                cloud.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, (float)mins / 60); // change the alpha value of the clouds so they become visible
+                if (cloud != null)
+                {
+                    cloud.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, (float)mins / 60); // change the alpha value of the clouds so they become visible
+                }         
             }
 
             if (activateLights == true) // if lights are on

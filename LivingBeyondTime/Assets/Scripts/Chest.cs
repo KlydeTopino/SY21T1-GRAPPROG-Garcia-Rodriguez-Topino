@@ -9,6 +9,8 @@ public class Chest : MonoBehaviour
 
     public GameObject OpenedChest;
     public ParticleSystem GoldEffect;
+    public GameObject Item;
+    public int ItemOffset;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +24,17 @@ public class Chest : MonoBehaviour
         {
             OpenedChest.SetActive(true);
             GoldEffect.Play();
+            SummonKey();
 
             ClosedChestCollider.enabled = false;
             ClosedChestSprite.enabled = false;
         }
+    }
+
+    public void SummonKey()
+    {
+        Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y + ItemOffset, transform.position.z);
+
+        Instantiate(Item, spawnPos, Quaternion.identity);
     }
 }
