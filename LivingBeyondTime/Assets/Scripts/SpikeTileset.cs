@@ -23,18 +23,22 @@ public class SpikeTileset : MonoBehaviour
                 {
                     Hearts[i].SetActive(false);
                     TotalHearts--;
-                    HealthChecker(TotalHearts);
+                    //HealthChecker(TotalHearts);
                     break;
                 }
             }
         }
     }
-    public void HealthChecker(int TotalHearts)
+
+    void Update()
     {
-        if(TotalHearts == 0)
+        if (TotalHearts == 0)
         {
             DeathCanvas.SetActive(true);
-            Debug.Log("Player is dead");
         }
+    }
+    public void HealthChecker(int TotalHearts)
+    {
+        
     }
 }
