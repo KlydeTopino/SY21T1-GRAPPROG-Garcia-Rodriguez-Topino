@@ -247,6 +247,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 3254363}
   runSpeed: 200
+  playerAnimator: {fileID: 3254357}
+  playerRigidbody: {fileID: 3254362}
   jump: 0
   Keys: 0
 --- !u!61 &3254361
@@ -314,10 +316,10 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 319
+    m_Bits: 8
   m_GroundCheck: {fileID: 1010258559}
   m_CeilingCheck: {fileID: 1718480666}
-  m_CrouchDisableCollider: {fileID: 0}
+  m_CrouchDisableCollider: {fileID: 3254361}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
