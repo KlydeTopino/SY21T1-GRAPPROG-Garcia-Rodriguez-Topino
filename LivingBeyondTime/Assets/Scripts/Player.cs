@@ -38,7 +38,6 @@ public class Player : MonoBehaviour
             //state = State.jumping;
         }
 
-        UpdateKey();
         VelocityState();
         playerAnimator.SetInteger("state", (int)state);
     }
@@ -49,16 +48,11 @@ public class Player : MonoBehaviour
         jump = false; //Single Jump Only
     }
 
-    public void UpdateKey()
-    {
-
-    }
-
     private void VelocityState()
     {
-        if(state == State.jumping)
+        if (Mathf.Abs(playerRigidbody.velocity.y) >= Mathf.Epsilon)//LT par try mo i-play. Hyper sya ih //state == State.jumping;
         {
-
+            state = State.jumping;
         }
 
         else if(Mathf.Abs(playerRigidbody.velocity.x) > Mathf.Epsilon)
