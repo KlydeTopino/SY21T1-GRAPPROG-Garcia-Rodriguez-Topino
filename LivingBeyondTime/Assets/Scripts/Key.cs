@@ -9,6 +9,7 @@ public class Key : MonoBehaviour
     [HideInInspector] public BoxCollider2D KeyCollider;
     public TextMeshProUGUI KeyQuantityText;
     public Player PlayerScript;
+    private bool isExecuted = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +19,9 @@ public class Key : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !isExecuted)
         {
+            isExecuted = true;
             KeyCollider.enabled = false;
             PlayerScript.Keys += 1;
             KeyQuantityText.text = "x " + PlayerScript.Keys;
