@@ -7,8 +7,7 @@ public class Player : MonoBehaviour
     [Header("Configs")]
     public PlayerController2D controller;
     public float runSpeed;
-    public Animator playerAnimator;
-    public Rigidbody2D playerRigidbody;
+    
 
     float horizontalMove = 0f;
     public bool jump = false;
@@ -16,13 +15,10 @@ public class Player : MonoBehaviour
     [Header("Inventory")]
     public int Keys = 0;
 
-    private enum State { idle, running, jumping }
-    private State state = State.idle;
 
     void Start()
     {
-        playerAnimator = GetComponent<Animator>();
-        playerRigidbody = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
@@ -38,32 +34,13 @@ public class Player : MonoBehaviour
             //state = State.jumping;
         }
 
-        VelocityState();
-        playerAnimator.SetInteger("state", (int)state);
+        
     }
 
     void FixedUpdate()
     {
         controller.Move(horizontalMove * Time.deltaTime, false, jump);
         jump = false; //Single Jump Only
-    }
-
-    private void VelocityState()
-    {
-        if (Mathf.Abs(playerRigidbody.velocity.y) >= Mathf.Epsilon)//LT par try mo i-play. Hyper sya ih //state == State.jumping;
-        {
-            state = State.jumping;
-        }
-
-        else if(Mathf.Abs(playerRigidbody.velocity.x) > Mathf.Epsilon)
-        {
-            state = State.running;
-        }
-
-        else
-        {
-            state = State.idle;
-        }
     }
 
 }
