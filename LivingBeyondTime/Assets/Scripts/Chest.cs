@@ -10,7 +10,10 @@ public class Chest : MonoBehaviour
     public GameObject OpenedChest;
     public ParticleSystem GoldEffect;
     public GameObject Item;
+    public GameObject Potion;
     public int ItemOffset;
+    public int PotionOffset;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,7 @@ public class Chest : MonoBehaviour
             OpenedChest.SetActive(true);
             GoldEffect.Play();
             SummonKey();
+            SummonPotion();
 
             ClosedChestCollider.enabled = false;
             ClosedChestSprite.enabled = false;
@@ -37,4 +41,12 @@ public class Chest : MonoBehaviour
 
         Instantiate(Item, spawnPos, Quaternion.identity);
     }
+
+    public void SummonPotion()
+    {
+        Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y + PotionOffset, transform.position.z);
+
+        Instantiate(Potion, spawnPos, Quaternion.identity);
+    }
+
 }

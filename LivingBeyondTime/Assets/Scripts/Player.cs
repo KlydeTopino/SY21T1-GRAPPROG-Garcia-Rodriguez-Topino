@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
 
     [Header("Inventory")]
     public int Keys = 0;
+    public int Potion = 0;
 
     void Start()
     {
