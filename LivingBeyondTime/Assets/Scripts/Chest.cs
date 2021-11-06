@@ -11,7 +11,7 @@ public class Chest : MonoBehaviour
     public ParticleSystem GoldEffect;
     public GameObject Item;
     public GameObject Potion;
-    public int ItemOffset;
+    public int KeyOffset;
     public int PotionOffset;
 
     // Start is called before the first frame update
@@ -37,7 +37,7 @@ public class Chest : MonoBehaviour
 
     public void SummonKey()
     {
-        Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y + ItemOffset, transform.position.z);
+        Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y + KeyOffset, transform.position.z);
 
         Instantiate(Item, spawnPos, Quaternion.identity);
     }
