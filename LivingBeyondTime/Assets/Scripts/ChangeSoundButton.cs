@@ -10,16 +10,13 @@ public class ChangeSoundButton : MonoBehaviour
     public Button button;
     private bool isOn = true;
 
+    
+
     public AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
         soundOnImage = button.image.sprite;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
     }
 
@@ -38,4 +35,6 @@ public class ChangeSoundButton : MonoBehaviour
             audioSource.mute = false;
         }
     }
+
+    
 }
