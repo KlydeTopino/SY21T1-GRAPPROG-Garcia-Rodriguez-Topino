@@ -6,19 +6,40 @@ public class CaveExit : MonoBehaviour
 {
     public GameObject Teleport;
     public GameObject NightSky;
+    public GameObject InteractIcon;
+    public GameObject CaveIntro;
+    public int SecsIntroExit;
 
     private bool canEnter = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        canEnter = true;
-        EnterCave(collision, canEnter);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            canEnter = true;
+            InteractIcon.SetActive(true);
+            CaveIntro.SetActive(true);
+
+            EnterCave(collision, canEnter);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        canEnter = true;
-        EnterCave(collision, canEnter);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            canEnter = true;
+            EnterCave(collision, canEnter);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            InteractIcon.SetActive(false);
+            StartCoroutine(CloseIntro());
+        }
     }
 
     public void EnterCave(Collider2D collision, bool isEnter)
@@ -27,7 +48,14 @@ public class CaveExit : MonoBehaviour
         {
             collision.transform.position = Teleport.transform.position;
             NightSky.SetActive(true);
+            InteractIcon.SetActive(false);
             isEnter = false;
         }
+    }
+
+    public IEnumerator CloseIntro()
+    {
+        yield return new WaitForSeconds(SecsIntroExit);
+        CaveIntro.SetActive(false);
     }
 }
