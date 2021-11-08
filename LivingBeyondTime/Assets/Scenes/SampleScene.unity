@@ -374,7 +374,7 @@ SpriteRenderer:
   m_SortingLayerID: -1107514937
   m_SortingLayer: 2
   m_SortingOrder: 10
-  m_Sprite: {fileID: -2791844601613577038, guid: 53fbf9c412e830c46bf04d668b8b4832, type: 3}
+  m_Sprite: {fileID: 2980219195543067627, guid: c2ea1af29f332474dbd3a6945f683809, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8965,6 +8965,7 @@ MonoBehaviour:
   - {fileID: 2036405009}
   DeathCanvas: {fileID: 1097235405}
   TotalHearts: 0
+  playerAnimator: {fileID: 3254357}
 --- !u!1001 &227554732
 PrefabInstance:
   m_ObjectHideFlags: 0

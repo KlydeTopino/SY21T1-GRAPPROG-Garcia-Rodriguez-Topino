@@ -7,9 +7,11 @@ public class SpikeTileset : MonoBehaviour
     public GameObject[] Hearts;
     public GameObject DeathCanvas;
     public int TotalHearts;
+    //public Animator playerAnimator;
     void Start()
     {
         TotalHearts = Hearts.Length;
+        //playerAnimator = GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -23,6 +25,7 @@ public class SpikeTileset : MonoBehaviour
                 {
                     Hearts[i].SetActive(false);
                     TotalHearts--;
+
                     //HealthChecker(TotalHearts);
                     break;
                 }
@@ -35,6 +38,7 @@ public class SpikeTileset : MonoBehaviour
         if (TotalHearts == 0)
         {
             DeathCanvas.SetActive(true);
+            //playerAnimator.SetTrigger("Death");
         }
     }
     public void HealthChecker(int TotalHearts)
