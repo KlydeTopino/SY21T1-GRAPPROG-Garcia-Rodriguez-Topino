@@ -14,8 +14,10 @@ public class PlayerFSM : MonoBehaviour
     public enum State { idle, running, jumping, falling, hurt, death }
     public State state = State.idle;
 
+    [Header("Configuration/s")]
+    public SpikeTileset SpikeTilesetScript;
     Player playerScript;
-    SpikeTileset SpikeTilesetScript;
+    [HideInInspector] public bool hasDied = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,21 +25,11 @@ public class PlayerFSM : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         playerScript = GetComponent<Player>();
-        SpikeTilesetScript = GetComponent<SpikeTileset>();
+        //SpikeTilesetScript = GetComponent<SpikeTileset>();
     }
-
     // Update is called once per frame
     void Update()
     {
-        if (playerScript.horizontalMove < 0)
-        {
-            state = State.running;
-        }
-        else if (playerScript.horizontalMove > 0)
-        {
-            state = State.running;
-        }
-
         if (Input.GetKeyDown(KeyCode.X))
         {
             Attack();
@@ -47,32 +39,55 @@ public class PlayerFSM : MonoBehaviour
         playerAnimator.SetInteger("state", (int)state);
     }
 
-    private void VelocityState()
+    public void VelocityState()
     {
-        if (state == State.jumping)//LT par try mo i-play. Hyper sya ih //state == State.jumping;
+        if (SpikeTilesetScript.TotalHearts != 0 && !hasDied)
         {
-            if(playerRigidbody.velocity.y < 0f)
-            {
-                state = State.falling;
-            }
-        }
 
-        else if (state == State.falling)
-        {
-            if(coll.IsTouchingLayers(ground))
+            if (playerScript.horizontalMove < 0)
+            {
+                state = State.running;
+            }
+            else if (playerScript.horizontalMove > 0)
+            {
+                state = State.running;
+            }
+
+            if (state == State.jumping)//LT par try mo i-play. Hyper sya ih //state == State.jumping;
+            {
+                if (playerRigidbody.velocity.y < 0f)
+                {
+                    state = State.falling;
+                }
+            }
+
+            else if (state == State.falling)
+            {
+                if (coll.IsTouchingLayers(ground))
+                {
+                    state = State.idle;
+                }
+            }
+
+            else if (Mathf.Abs(playerRigidbody.velocity.x) > Mathf.Epsilon)
+            {
+                state = State.running;
+            }
+            else
             {
                 state = State.idle;
             }
-        } 
+        }
+        else
+        {
+            // Play animation once
+            if (!hasDied)
+            {
+                DeathAnimation();
+                hasDied = true;
+            }
+        }
 
-        else if (Mathf.Abs(playerRigidbody.velocity.x) > Mathf.Epsilon)
-        {
-            state = State.running;
-        }
-            else
-        {
-            state = State.idle;
-        }
     }
 
     private void Attack()
@@ -80,15 +95,11 @@ public class PlayerFSM : MonoBehaviour
         playerAnimator.SetTrigger("SpearAttack");
     }
 
-   public void DeathAnimation()
-   {
-        if (SpikeTilesetScript.TotalHearts  == 0)
-        {
-            playerAnimator.SetTrigger("Death");
-        }
-   }
-
-
-
+    public void DeathAnimation()
+    {
+        //state = State.death;
+        playerAnimator.SetTrigger("Death");
+        playerScript.enabled = false;
+        this.enabled = false;
+    }
 }
-
