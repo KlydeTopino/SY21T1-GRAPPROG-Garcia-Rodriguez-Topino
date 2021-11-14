@@ -25,7 +25,6 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHearts -= damage;
-
         enemyAnimator.SetTrigger("Hurt");
 
         if (currentHearts <= 0)
@@ -38,6 +37,7 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Enemy Died");
 
+        SoundManager.PlaySound("EnemyDead");
         enemyAnimator.SetBool("IsDead", true);
 
         this.enabled = false;

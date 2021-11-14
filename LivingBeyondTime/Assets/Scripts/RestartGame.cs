@@ -32,6 +32,7 @@ public class RestartGame : MonoBehaviour
 
     public void RestartHearts()
     {
+        SoundManager.PlaySound("Respawn");
         Tileset.TotalHearts = Tileset.Hearts.Length;
         Heart1.SetActive(true);
         Heart2.SetActive(true);

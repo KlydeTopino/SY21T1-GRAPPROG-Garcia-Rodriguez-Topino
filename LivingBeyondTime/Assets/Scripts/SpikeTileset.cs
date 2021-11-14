@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class SpikeTileset : MonoBehaviour
 {
+    public AudioSource BGMusic;
     public GameObject[] Hearts;
     public GameObject DeathCanvas;
     public int TotalHearts;
-    //public Animator playerAnimator;
+    //public Animator playerAnimator
+
     void Start()
     {
         TotalHearts = Hearts.Length;
@@ -25,8 +27,14 @@ public class SpikeTileset : MonoBehaviour
                 {
                     Hearts[i].SetActive(false);
                     TotalHearts--;
+                    SoundManager.PlaySound("Hurt");
+                    
+                    if (TotalHearts == 1)
+                    {
+                        BGMusic.volume = 0.1f;
+                        InvokeRepeating("TriggerDying", 0.001f, 3f);
+                    }
 
-                    //HealthChecker(TotalHearts);
                     break;
                 }
             }
@@ -40,9 +48,17 @@ public class SpikeTileset : MonoBehaviour
             DeathCanvas.SetActive(true);
             //playerAnimator.SetTrigger("Death");
         }
+
+        if (TotalHearts > 1)
+        {
+            BGMusic.volume = 0.5f;
+            CancelInvoke();
+        }
+
     }
-    public void HealthChecker(int TotalHearts)
+
+    public void TriggerDying()
     {
-        
+        SoundManager.PlaySound("LowHP");
     }
 }

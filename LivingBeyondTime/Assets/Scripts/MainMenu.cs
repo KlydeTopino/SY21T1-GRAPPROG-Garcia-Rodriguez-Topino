@@ -12,10 +12,12 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         IsStarting = true;
+        SoundManager.PlaySound("Click");
     }
 
     public void QuitGame()
     {
+        SoundManager.PlaySound("Click");
         Debug.Log("QUIT");
         Application.Quit();
     }

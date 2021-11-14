@@ -54,7 +54,7 @@ public class PlayerFSM : MonoBehaviour
             }
 
             if (state == State.jumping)//LT par try mo i-play. Hyper sya ih //state == State.jumping;
-            {
+            {      
                 if (playerRigidbody.velocity.y < 0f)
                 {
                     state = State.falling;
@@ -83,6 +83,7 @@ public class PlayerFSM : MonoBehaviour
             // Play animation once
             if (!hasDied)
             {
+                SoundManager.PlaySound("Dead");
                 DeathAnimation();
                 hasDied = true;
             }
@@ -93,6 +94,7 @@ public class PlayerFSM : MonoBehaviour
     private void Attack()
     {
         playerAnimator.SetTrigger("SpearAttack");
+        SoundManager.PlaySound("Attack");
     }
 
     public void DeathAnimation()

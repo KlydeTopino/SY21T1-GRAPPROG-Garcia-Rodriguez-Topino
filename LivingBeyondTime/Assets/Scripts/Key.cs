@@ -21,6 +21,7 @@ public class Key : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && !isExecuted)
         {
+            SoundManager.PlaySound("Pickup_Key");
             isExecuted = true;
             KeyCollider.enabled = false;
             PlayerScript.Keys += 1;

@@ -30,10 +30,10 @@ public class Player : MonoBehaviour
     {
         //transform.Translate(Input.GetAxis("Horizontal") * 15f * Time.deltaTime, 0f, 0f);
         horizontalMove = Input.GetAxis("Horizontal") * runSpeed;
-       
 
         if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) && coll.IsTouchingLayers(ground))
         {
+            SoundManager.PlaySound("Jump");
             jump = true;
             PlayerFSMScript.state = PlayerFSM.State.jumping;
             //state = State.jumping;
