@@ -23,8 +23,12 @@ public class Potion : MonoBehaviour
             isExecuted = true;
             PotionCollider.enabled = false;
             PlayerScript.Potion += 1;
-            PotionQuantityText.text = "x " + PlayerScript.Potion;
             Destroy(gameObject);
         }
+    }
+
+    private void Update()
+    {
+        PotionQuantityText.text = "x " + PlayerScript.Potion;
     }
 }

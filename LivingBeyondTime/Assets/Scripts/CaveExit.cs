@@ -11,6 +11,7 @@ public class CaveExit : MonoBehaviour
     public int SecsIntroExit;
 
     private bool canEnter = false;
+    public BGSound BGSoundScript;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -46,6 +47,7 @@ public class CaveExit : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && Input.GetButtonDown("Enter") && isEnter)
         {
+            BGSoundScript.PlayWhatIsLoveMusic();
             collision.transform.position = Teleport.transform.position;
             NightSky.SetActive(true);
             InteractIcon.SetActive(false);

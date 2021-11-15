@@ -34,12 +34,11 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) && coll.IsTouchingLayers(ground))
         {
             SoundManager.PlaySound("Jump");
+            PlayerFSMScript.CreateDust();
             jump = true;
             PlayerFSMScript.state = PlayerFSM.State.jumping;
             //state = State.jumping;
         }
-
-        
     }
 
     void FixedUpdate()

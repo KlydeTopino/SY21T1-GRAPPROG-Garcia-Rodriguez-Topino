@@ -10,6 +10,8 @@ public class CaveEntrance : MonoBehaviour
 
     private bool canEnter = false;
 
+    public BGSound BGSoundScript;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -41,6 +43,7 @@ public class CaveEntrance : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && Input.GetButtonDown("Enter") && isEnter)
         {
+            BGSoundScript.PlayDungeonMusic();
             collision.transform.position = Teleport.transform.position;
             NightSky.SetActive(false);
             InteractIcon.SetActive(false);

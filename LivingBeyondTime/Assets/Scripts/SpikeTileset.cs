@@ -8,6 +8,7 @@ public class SpikeTileset : MonoBehaviour
     public GameObject[] Hearts;
     public GameObject DeathCanvas;
     public int TotalHearts;
+    public GameObject[] HeartHeal;
     //public Animator playerAnimator
 
     void Start()
@@ -46,6 +47,7 @@ public class SpikeTileset : MonoBehaviour
         if (TotalHearts == 0)
         {
             DeathCanvas.SetActive(true);
+            CancelInvoke();
             //playerAnimator.SetTrigger("Death");
         }
 
@@ -54,7 +56,6 @@ public class SpikeTileset : MonoBehaviour
             BGMusic.volume = 0.5f;
             CancelInvoke();
         }
-
     }
 
     public void TriggerDying()

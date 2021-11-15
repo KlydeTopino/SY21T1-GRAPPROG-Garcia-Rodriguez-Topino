@@ -25,9 +25,13 @@ public class Key : MonoBehaviour
             isExecuted = true;
             KeyCollider.enabled = false;
             PlayerScript.Keys += 1;
-            KeyQuantityText.text = "x " + PlayerScript.Keys;
             Destroy(gameObject);
         }
+    }
+
+    private void Update()
+    {
+        KeyQuantityText.text = "x " + PlayerScript.Keys;
     }
 
 }

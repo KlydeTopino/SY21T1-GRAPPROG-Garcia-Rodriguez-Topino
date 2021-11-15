@@ -8,6 +8,7 @@ public class PlayerFSM : MonoBehaviour
     public Animator playerAnimator;
     public Rigidbody2D playerRigidbody;
     public Collider2D coll;
+    public ParticleSystem DustPS;
 
     public LayerMask ground;
     //FSM States
@@ -30,9 +31,14 @@ public class PlayerFSM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetButtonDown("Attack"))
         {
             Attack();
+        }
+
+        if (state == State.running)
+        {
+            CreateDust();
         }
 
         VelocityState();
@@ -103,5 +109,10 @@ public class PlayerFSM : MonoBehaviour
         playerAnimator.SetTrigger("Death");
         playerScript.enabled = false;
         this.enabled = false;
+    }
+
+    public void CreateDust()
+    {
+        DustPS.Play();
     }
 }
