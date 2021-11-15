@@ -18,6 +18,7 @@ public class PlayerFSM : MonoBehaviour
     [Header("Configuration/s")]
     public SpikeTileset SpikeTilesetScript;
     Player playerScript;
+    PlayerFSM PlayerFSMScript;
     [HideInInspector] public bool hasDied = false;
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class PlayerFSM : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         playerScript = GetComponent<Player>();
+        PlayerFSMScript = GetComponent<PlayerFSM>();
         //SpikeTilesetScript = GetComponent<SpikeTileset>();
     }
     // Update is called once per frame
@@ -92,6 +94,7 @@ public class PlayerFSM : MonoBehaviour
                 SoundManager.PlaySound("Dead");
                 DeathAnimation();
                 hasDied = true;
+                PlayerFSMScript.enabled = false;
             }
         }
 

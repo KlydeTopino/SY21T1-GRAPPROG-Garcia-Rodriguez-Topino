@@ -17,15 +17,25 @@ public class PlayerCombat : MonoBehaviour
 
     public float constant = 1f;
 
+    PlayerCombat PlayerCombatScript;
+    PlayerFSM PlayerFSMScript;
+
+
     // Start is called before the first frame update
     void Start()
     {
-
+        PlayerCombatScript = GetComponent<PlayerCombat>();
+        PlayerFSMScript = GetComponent<PlayerFSM>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (PlayerFSMScript.hasDied)
+        {
+            PlayerCombatScript.enabled = false;
+        }
+
         if (Time.time >= nextAttackTime) //Checks if it exceeds the nextAttackTime so the player can attack again
         {
             if (Input.GetButtonDown("Attack"))
